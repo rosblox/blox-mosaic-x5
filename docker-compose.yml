@@ -8,28 +8,24 @@ services:
     network_mode: "host"
     restart: always
 
-  # rosblox-studio:
-  #   image: ghcr.io/rosblox/studio:latest
-  #   volumes:
-  #     - ./studio/layout.json:/src/layout.json
-  #   ports:
-  #     - 8080:8080
-  #   restart: always
+  rosblox-studio:
+    image: ghcr.io/rosblox/studio:latest
+    volumes:
+      - ./studio/layout.json:/src/layout.json
+    ports:
+      - 8080:8080
+    restart: always
 
-  # ros-rosbridge-suite:
-  #   image: ghcr.io/rosblox/ros-rosbridge-suite:humble
-  #   ports:
-  #     - 9090:9090
-  #   restart: always
-  #   command: ros2 launch rosbridge_server rosbridge_websocket_launch.xml
-
+  ros-rosbridge-suite:
+    image: ghcr.io/rosblox/ros-rosbridge-suite:humble
+    ports:
+      - 9090:9090
+    restart: always
+    command: ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 
   rtklib:
     image: ghcr.io/rosblox/rtklib:latest
     restart: always
-    #    devices:
-    #      - /dev/ttyS0:/dev/ttyS0
-    #    command: str2str -in ntrip://:@www.swipos.ch:2101/MSM_GISGEO_LV95LHN95 -b 1 -out serial://ttyS0:115200:8:n:1:off
     command: str2str -in ntrip://XXUSERXX:XXXPASSWORDXXX@www.swipos.ch:2101/MSM_GISGEO_LV95LHN95 -b 1 -out tcpcli://192.168.3.1:6666
 
   ros-septentrio-gnss-driver:
