@@ -1,0 +1,19 @@
+{
+    "configById": {
+      "map!38o219r": {
+        "disabledTopics": [],
+        "layer": "map",
+        "customTileUrl": "",
+        "followTopic": "/navsatfix",
+        "zoomLevel": 21
+      }
+    },
+    "globalVariables": {},
+    "userNodes": {},
+    "linkedGlobalVariables": [],
+    "playbackConfig": {
+      "speed": 1,
+      "messageOrder": "receiveTime"
+    },
+    "layout": "map!38o219r"
+}
