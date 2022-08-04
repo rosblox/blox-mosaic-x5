@@ -1,11 +1,9 @@
-# BloX LIS3DH
+# BloX Mosaic-X5
 
-The BloX LIS3DH implements [Adafruit's LIS3DH Triple-Axis Accelerometer](https://www.adafruit.com/product/2809).
+The BloX Mosaic-X5 is based on the [mosaicHAT](https://github.com/septentrio-gnss/mosaicHAT) which is equipped with a [Septentrio Mosaic-X5](https://www.septentrio.com/en/products/gnss-receivers/receivers-module/mosaic). The BloX uses the [ROS driver](https://github.com/septentrio-gnss/septentrio_gnss_driver) maintained by Septentrio.
+
 
 ## Data
 
-The BloX LIS3DH publishes acceleration data as [geometry_msgs/msg/Vector3Stamped](https://docs.ros2.org/foxy/api/geometry_msgs/msg/Vector3Stamped.html).
+The BloX Mosaic-X5 publishes localization data as [sensor_msgs/msg/NavSatFix](http://docs.ros.org/en/lunar/api/sensor_msgs/html/msg/NavSatFix.html).
 
-## Visualization
-
-![](resources/visualization.gif)
