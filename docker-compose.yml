@@ -26,7 +26,7 @@ services:
   rtklib:
     image: ghcr.io/rosblox/rtklib:latest
     restart: always
-    command: str2str -in ntrip://$NTRIP_USER:$NTRIP_PASSWORD@www.swipos.ch:2101/MSM_GISGEO_LV95LHN95 -b 1 -out tcpcli://192.168.3.1:6666
+    command: str2str -in ntrip://$NTRIP_USER:$NTRIP_PASSWORD@www.swipos.ch:2101/MSM_GISGEO_LV95LHN95 -b 1 -out tcpcli://192.168.60.1:6666
 
   ros-septentrio-gnss-driver:
     image: ghcr.io/rosblox/ros-septentrio-gnss-driver:humble
